@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product | Akshi Edit</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-page {
+      max-width: 700px;
+      margin: auto;
+      padding: 30px 5%;
+    }
+
+    .admin-box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .admin-box h1 {
+      color: #651b32;
+      margin-bottom: 10px;
+    }
+
+    .admin-box label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    .admin-box input,
+    .admin-box select,
+    .admin-box textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font: inherit;
+    }
+
+    .admin-box textarea {
+      min-height: 100px;
+    }
+
+    .preview-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .preview-images img {
+      width: 90px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .publish-btn {
+      width: 100%;
+      margin-top: 25px;
+      padding: 16px;
+      border: 0;
+      border-radius: 8px;
+      background: #651b32;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #651b32;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="admin-page">
+    <a href="index.html" class="logo">AKSHI <span>EDIT</span></a>
+
+    <div class="admin-box">
+      <h1>Add New Product</h1>
+      <p>Add it once and the website creates its listing automatically.</p>
+
+      <form id="productForm">
+
+        <label>Product Name</label>
+        <input id="name" required>
+
+        <label>Price (₹)</label>
+        <input id="price" type="number" required>
+
+        <label>Category</label>
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <option>Dresses</option>
+          <option>Co-ords</option>
+          <option>Tops</option>
+          <option>Skirts</option>
+          <option>Sarees</option>
+          <option>Ethnic Wear</option>
+          <option>Bottoms</option>
+          <option>Winter Wear</option>
+          <option>Party Wear</option>
+          <option>Accessories</option>
+        </select>
+
+        <label>Available Sizes</label>
+        <input id="sizes" placeholder="Example: S, M, L, XL">
+
+        <label>Description</label>
+        <textarea id="description"></textarea>
+
+        <label>Product Images</label>
+        <input id="images" type="file" accept="image/*" multiple>
+
+        <div class="preview-images" id="preview"></div>
+
+        <button class="publish-btn" type="submit">
+          PUBLISH PRODUCT
+        </button>
+
+        <p id="message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
