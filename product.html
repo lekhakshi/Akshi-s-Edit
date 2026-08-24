@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | Akshi Edit</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .product-page {
+      padding: 40px 6%;
+    }
+
+    .back-store {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #651b32;
+      text-decoration: none;
+    }
+
+    .single-product {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .single-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .single-images img,
+    .no-image {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    .no-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #efd8de;
+      color: #651b32;
+    }
+
+    .single-info {
+      padding-top: 20px;
+    }
+
+    .single-info > p:first-child {
+      color: #651b32;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .single-info h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    .single-info h2 {
+      color: #651b32;
+      margin-bottom: 25px;
+    }
+
+    .sizes,
+    .description {
+      margin: 20px 0;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .single-product {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .single-info h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      AKSHI <span>EDIT</span>
+    </a>
+  </header>
+
+  <main class="product-page">
+
+    <a href="index.html" class="back-store">
+      ← Back to Store
+    </a>
+
+    <div id="productPage">
+      Loading product...
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
